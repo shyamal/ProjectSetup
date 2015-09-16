@@ -8,9 +8,10 @@
 
 #import "ViewController.h"
 #import "SVProgressHUD.h"
+#import "AppDelegate.h"
 
 @interface ViewController (){
-   
+   AppDelegate *appDelegate;
 }
 
 @end
@@ -21,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     [[LocationHandler getSharedInstance]setDelegate:self];
     [[LocationHandler getSharedInstance]startUpdating];
 }

@@ -13,10 +13,11 @@
 @end
 
 @implementation AppDelegate
-
+@synthesize userDefaults;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    userDefaults = [NSUserDefaults standardUserDefaults];
     return YES;
 }
 
